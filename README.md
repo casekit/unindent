@@ -9,7 +9,7 @@ import { unindent } from "@casekit/unindent";
 
 describe("createSql", () => {
     test("with unindent", () => {
-        expect(createSql(pb)).toEqual(unindent`
+        expect(createSql(postsModel)).toEqual(unindent`
             CREATE TABLE posts (
                 id UUID NOT NULL PRIMARY KEY,
                 title TEXT NOT NULL,
@@ -19,7 +19,7 @@ describe("createSql", () => {
     });
 
     test("without unindent", () => {
-        expect(createSql(pb)).toEqual(`CREATE TABLE posts (
+        expect(createSql(postsModel)).toEqual(`CREATE TABLE posts (
     id UUID NOT NULL PRIMARY KEY,
     title TEXT NOT NULL,
     content TEXT NOT NULL
