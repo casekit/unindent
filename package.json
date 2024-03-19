@@ -1,0 +1,17 @@
+{
+    "name": "@casekit/unindent",
+    "version": "1.0.0",
+    "description": "Strips the leading whitespace from the left of a multiline string",
+    "main": "lib/index",
+    "types": "lib/index",
+    "scripts": {
+        "test": "vitest"
+    },
+    "devDependencies": {
+        "prettier": "^3.2.5",
+        "vitest": "^1.1.1",
+        "typescript": "^5.3.3"
+    },
+    "author": "Russell Dunphy",
+    "license": "ISC"
+}
