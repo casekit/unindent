@@ -44,4 +44,4 @@ jobs:
             - uses: actions/checkout@v4
             - uses: ./.github/actions/ci-setup
             - name: Prettier
-              run: pnpm prettier:check
+              run: pnpm prettier
