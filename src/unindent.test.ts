@@ -58,4 +58,25 @@ describe("unindent", () => {
     content TEXT NOT NULL
 )`);
     });
+
+    test("it handles empty lines in the middle of the string", () => {
+        expect(unindent`
+
+        CREATE TABLE posts (
+            id UUID NOT NULL PRIMARY KEY,
+
+            title TEXT NOT NULL,
+
+            content TEXT NOT NULL
+        )
+
+
+      `).toEqual(`CREATE TABLE posts (
+    id UUID NOT NULL PRIMARY KEY,
+
+    title TEXT NOT NULL,
+
+    content TEXT NOT NULL
+)`);
+    });
 });
