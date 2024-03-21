@@ -7,7 +7,9 @@
     "scripts": {
         "lint": "eslint --ignore-path .gitignore src",
         "prettier": "prettier -c src",
-        "typecheck": "tsc",
+        "typecheck": "tsc --noEmit",
+        "release": "pnpm build && pnpm publish",
+        "build": "tsc",
         "test": "vitest"
     },
     "devDependencies": {
