@@ -79,4 +79,15 @@ describe("unindent", () => {
     content TEXT NOT NULL
 )`);
     });
+
+    test("it handles interpolated values and ignores nulls", () => {
+        expect(unindent`
+            SELECT *
+            FROM casekit.posts
+            WHERE title = '${"My first post"}'
+            ${null}
+      `).toEqual(`SELECT *
+FROM casekit.posts
+WHERE title = 'My first post'`);
+    });
 });

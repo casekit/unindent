@@ -1,5 +1,16 @@
-export const unindent = (strings: TemplateStringsArray) => {
-    const joined = strings.join("");
+export const unindent = (
+    strings: TemplateStringsArray,
+    ...values: unknown[]
+) => {
+    const joined = values
+        .reduce(
+            (acc: string[], arg: unknown, index: number) => {
+                return [...acc, arg?.toString() ?? "", strings[index + 1]];
+            },
+            [strings[0]],
+        )
+        .join("");
+
     const lines = joined.split("\n");
 
     // strip any leading empty lines
