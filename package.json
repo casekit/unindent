@@ -1,6 +1,6 @@
 {
     "name": "@casekit/unindent",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "description": "Strips the leading whitespace from the left of a multiline string",
     "main": "index.js",
     "types": "index.d.ts",
