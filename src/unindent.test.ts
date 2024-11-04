@@ -1,5 +1,5 @@
 import { describe, test, expect } from "vitest";
-import { unindent } from "./unindent";
+import { unindent } from "#unindent";
 
 describe("unindent", () => {
     test("it strips whitespace from the left-hand side of multiline strings", () => {

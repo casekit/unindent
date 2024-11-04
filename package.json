@@ -2,13 +2,22 @@
     "name": "@casekit/unindent",
     "version": "1.0.2",
     "description": "Strips the leading whitespace from the left of a multiline string",
-    "main": "lib/index",
-    "types": "lib/index",
+    "main": "index.js",
+    "types": "index.d.ts",
+    "imports": {
+        "#*": "./build/*"
+    },
+    "exports": {
+        ".": "./build/index.js"
+    },
+    "files": [
+        "/build"
+    ],
     "scripts": {
         "lint": "eslint --ignore-path .gitignore src",
         "prettier": "prettier -c src",
         "typecheck": "tsc --noEmit",
-        "release": "rm -rf lib && pnpm build && pnpm version patch && pnpm publish",
+        "release": "rm -rf build && pnpm build && pnpm version patch && pnpm publish",
         "build": "tsc",
         "test": "vitest"
     },
