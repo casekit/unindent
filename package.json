@@ -29,5 +29,8 @@
         "vitest": "^1.1.1"
     },
     "author": "Russell Dunphy",
-    "license": "ISC"
+    "license": "ISC",
+    "publishConfig": {
+        "registry": "https://npm.pkg.github.com"
+    }
 }
